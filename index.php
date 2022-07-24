@@ -1,4 +1,4 @@
 <?php
 
-echo "Bienvenido a la app alumnos";
+echo "Bienvenido a la app de control de alumnos";
 ?>
