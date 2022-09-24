@@ -1,13 +1,13 @@
 <?php
-include ('../templates/cabecera.php');
+include('../templates/cabecera.php');
 ?>
 
 
 
-Control de alumnos 
+Control de alumnos
 vista alumnos
 
 
 <?php
-include ('../templates/pie.php');
+include('../templates/pie.php');
 ?>

@@ -1,5 +1,6 @@
 <?php
 include('../templates/cabecera.php');
+include('../secciones/cursos.php');
 ?>
 
 
