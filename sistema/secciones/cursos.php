@@ -4,4 +4,5 @@
 
 include_once '../configuraciones/db.php';
 $conexionDB = DB::crearInstancia();
+
 ?>
