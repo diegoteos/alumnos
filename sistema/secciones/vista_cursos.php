@@ -3,9 +3,6 @@ include('../templates/cabecera.php');
 include('../secciones/cursos.php');
 ?>
 
-
-
-
 <div class="col-md-5">
 
     <form action="" method="post">
@@ -23,9 +20,9 @@ include('../secciones/cursos.php');
                     <input type="text" class="form-control" name="nombre_curso" id="nombre_curso" aria-describedby="helpId" placeholder="Nombre del curso">
                 </div>
                 <div class="btn-group" role="group" aria-label="Button group name">
-                    <button type="button" class="btn btn-success">Agregar</button>
-                    <button type="button" class="btn btn-warning">Editar</button>
-                    <button type="button" class="btn btn-danger">Borrar</button>
+                    <button type="submit" class="btn btn-success">Agregar</button>
+                    <button type="submit" class="btn btn-warning">Editar</button>
+                    <button type="submit" class="btn btn-danger">Borrar</button>
                 </div>
             </div>
 
