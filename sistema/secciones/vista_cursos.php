@@ -20,9 +20,9 @@ include('../secciones/cursos.php');
                     <input type="text" class="form-control" name="nombre_curso" id="nombre_curso" aria-describedby="helpId" placeholder="Nombre del curso">
                 </div>
                 <div class="btn-group" role="group" aria-label="Button group name">
-                    <button type="submit" class="btn btn-success">Agregar</button>
-                    <button type="submit" class="btn btn-warning">Editar</button>
-                    <button type="submit" class="btn btn-danger">Borrar</button>
+                    <button type="submit" value="agregar" name="accion" class="btn btn-success">Agregar</button>
+                    <button type="submit" value="editar" name="accion" class="btn btn-warning">Editar</button>
+                    <button type="submit" value="borrar" name="accion" class="btn btn-danger">Borrar</button>
                 </div>
             </div>
 
@@ -43,10 +43,12 @@ include('../secciones/cursos.php');
             </tr>
         </thead>
         <tbody>
-            <td>1</td>
-            <td>Sitio web con php</td>
+            <?php foreach ($listaCursos as $curso){ ?>
+            <td><?php echo $curso['id']; ?></td>
+            <td><?php echo $curso['nombre_curso']; ?></td>
             <td>Seleccionar</td>
             </tr>
+            <?php } ?>
         </tbody>
     </table>
 </div>

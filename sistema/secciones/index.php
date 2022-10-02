@@ -10,7 +10,7 @@ include ('../templates/pie.php');
 
 
 
-echo '<script>alert('holA');</script>';
+echo "<script>alert('holA');</script>";
 
 
 
