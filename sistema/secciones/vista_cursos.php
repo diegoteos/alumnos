@@ -46,7 +46,12 @@ include('../secciones/cursos.php');
             <?php foreach ($listaCursos as $curso){ ?>
             <td><?php echo $curso['id']; ?></td>
             <td><?php echo $curso['nombre_curso']; ?></td>
-            <td>Seleccionar</td>
+            <td>
+                <form action="" method="post">
+                    <input type="hidden" name="id" id="id" value="<?php echo $curso['id']; ?>">
+                    <input type="submit" value="Seleccionar" name="accion" class="btn btn-info">
+                </form>
+            </td>
             </tr>
             <?php } ?>
         </tbody>
