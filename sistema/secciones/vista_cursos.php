@@ -13,11 +13,11 @@ include('../secciones/cursos.php');
             <div class="card-body">
                 <div class="mb-3">
                     <label for="" class="form-label">ID</label>
-                    <input type="text" class="form-control" name="id" id="id" aria-describedby="helpId" placeholder="Nombre">
+                    <input type="text" class="form-control" name="id" id="id" value="<?php echo $id; ?>" aria-describedby="helpId" placeholder="Nombre">
                 </div>
                 <div class="mb-3">
                     <label for="" class="form-label">Nombre</label>
-                    <input type="text" class="form-control" name="nombre_curso" id="nombre_curso" aria-describedby="helpId" placeholder="Nombre del curso">
+                    <input type="text" class="form-control" name="nombre_curso" id="nombre_curso" value= "<?php echo $nombre_curso; ?>" aria-describedby="helpId" placeholder="Nombre del curso">
                 </div>
                 <div class="btn-group" role="group" aria-label="Button group name">
                     <button type="submit" value="agregar" name="accion" class="btn btn-success">Agregar</button>

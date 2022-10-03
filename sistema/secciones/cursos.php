@@ -1,7 +1,5 @@
 <?php
 
-// INSERT INTO `cursos` (`id`, `nombre_curso`) VALUES (NULL, 'Sitio web con PHP');
-
 include_once '../configuraciones/db.php';
 $conexionDB = DB::crearInstancia();
 
@@ -20,12 +18,17 @@ if ($accion != '') {
             $consulta->execute();
             break;
         case 'editar':
-            $sql = "UPDATE cursos SET nombre_curso = '$nombre_curso' WHERE id = $id";
-            echo $sql;
+            $sql = "UPDATE cursos SET nombre_curso =:nombre_curso WHERE id = :id";
+            $consulta = $conexionDB->prepare($sql);
+            $consulta->bindParam(':id', $id);
+            $consulta->bindParam(':nombre_curso', $nombre_curso);
+            $consulta->execute();
             break;
         case 'borrar':
-            $sql = "DELETE FROM `cursos` WHERE id=$id";
-            echo $sql;
+            $sql = "DELETE FROM `cursos` WHERE id=:id";
+            $consulta = $conexionDB->prepare($sql);
+            $consulta->bindParam(':id', $id);
+            $consulta->execute();
             break;
         case 'Seleccionar':
             $sql= "SELECT * FROM `cursos` WHERE id =:id";
@@ -33,7 +36,7 @@ if ($accion != '') {
             $consulta->bindParam(':id', $id);
             $consulta->execute();
             $curso = $consulta->fetch(PDO::FETCH_ASSOC);
-            print_r($curso);
+            $nombre_curso=$curso['nombre_curso'];
             break;
     }
 }
